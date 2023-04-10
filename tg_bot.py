@@ -68,7 +68,7 @@ def help(message):
 @bot.message_handler(content_types=['text'])
 def answer(message):
     if date():
-        symbol = '<='
+        symbol = '<'
         if message.text.lower() == "понедельник":
             day1 = 'Понедельник'
             output1 = data(day1,symbol)
@@ -110,7 +110,7 @@ def answer(message):
     if message.text.lower() == 'расписание на текущую неделю':
         if date():
             output1 = ''
-            symbol = '<='
+            symbol = '<'
             day1 = 'Понедельник'
             output1 += data(day1, symbol)
             output1 += "Вторник" + "\n" + "______________\n" + "Нет пар\n" + "______________\n\n\n"
@@ -137,7 +137,7 @@ def answer(message):
     if message.text.lower() == 'расписание на следующую неделю':
         if not date():
             output1 = ''
-            symbol = '<='
+            symbol = '<'
             day1 = 'Понедельник'
             output1 += data(day1, symbol)
             output1 += "Вторник" + "\n" + "______________\n" + "Нет пар\n" + "______________\n\n\n"
